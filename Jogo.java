@@ -90,11 +90,16 @@ public class Jogo extends JFrame implements KeyListener {
 
     public void distibuiMoedas() {
         int numMoedas = 3;
-        for (int i = 0; i < numMoedas; i++) {
-            int x = (int) (Math.random() * mapa.getNumColunas());
-            int y = (int) (Math.random() * mapa.getNumLinhas());
-            if (mapa.getElemento(x, y) == null) {
-                mapa.setElemento('M', x, y);
+        if(numMoedas < 50)
+        {
+           for (int i = 0; i < numMoedas; i++)
+           {
+                int x = (int) (Math.random() * mapa.getNumColunas());
+                int y = (int) (Math.random() * mapa.getNumLinhas());
+                if (mapa.getElemento(x, y) == null)
+                {
+                    mapa.setElemento('M', x, y);
+                }
             }
         }
     }
@@ -149,7 +154,7 @@ public class Jogo extends JFrame implements KeyListener {
         // Cria um diálogo para exibir a mensagem de interação
         String mensagem = mapa.interage();
         if (mensagem != null) {
-            JOptionPane.showMessageDialog(this, mensagem);
+            JOptionPane.showMessageDialog(this, "Interagindo");
         }
     }
 

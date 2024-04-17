@@ -235,5 +235,11 @@ public class Mapa {
         elementos.put('I', new Inimigo('☠', Color.RED));
         // Moeda
         elementos.put('M', new Moeda('♦', goldColor));
+        //Dinossauro
+        //elementos.put(key:'D', new Dinossauro(simbolo:'🦖', Color.GREEN);
+        //Lambreta
+        //elementos.put(key:'L', new Lambreta(simbolo:'🛴', Color.PINK);
+        //Cruz
+        //elementos.put(key:'C', new Cruz(simbolo:'✞', Color.WHITE);
     }
 }

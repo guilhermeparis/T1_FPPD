@@ -1,29 +1,14 @@
 import java.awt.Color;
 
-public class Inimigo implements ElementoMapa {
+public class Cruz implements ElementoMapa {
     private Color cor;
     private Character simbolo;
-    private int x = 1;
-    private int y = 1;
 
-    public Inimigo(Character simbolo, Color cor) {
+    public Cruz(Character simbolo, Color cor) {
         this.simbolo = simbolo;
         this.cor = cor;
     }
     
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setPosicao(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
     @Override
     public Character getSimbolo() {
         return simbolo;
@@ -46,6 +31,6 @@ public class Inimigo implements ElementoMapa {
 
     @Override
     public String interage() {
-        return "Você perdeu.";
+        return "You've been blessed!";
     }
 }
